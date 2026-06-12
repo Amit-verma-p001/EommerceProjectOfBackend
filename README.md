@@ -81,7 +81,18 @@ CREATE DATABASE dream_shops_db;
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/dream_shops_db
 spring.datasource.username=root
-spring.datasource.password=your_password
+spring.datasource.password=YOUR_PASSWORD
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQLDialect
+
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+##(create, update, create-drop, validate)
+spring.jpa.hibernate.ddl-auto=update
+
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
 ```
 
 4. Run Application
